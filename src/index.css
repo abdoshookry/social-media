@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-[2em] font-bold;
+  }
+  h2 {
+    @apply text-[1.5em] font-bold;
+  }
+  h3 {
+    @apply text-[1.17em] font-bold;
+  }
+
+  h4 {
+    @apply text-[1em] font-bold;
+  }
+  h5 {
+    @apply text-[0.83em] font-bold;
+  }
+  h6 {
+    @apply text-[0.67em] font-bold;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header {
+  box-shadow: inset 0 8px 8px -8px rgb(0 0 0 / 30%),
+    inset 0 -8px 8px -8px rgb(0 0 0 / 30%);
+}
+
+.header h1 {
+  text-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+.active {
+  color: #5cb85c;
+  margin-right: 1rem;
+  border-bottom: 2px solid #5cb85c;
+  padding-bottom: 19px;
+}
+.not-active {
+  color: #aaa;
+  margin-right: 1rem;
+  padding-bottom: 19px;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  margin-top: 10px;
+  margin-bottom: 1rem;
+
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 400;
+
+  padding: 15px;
+  height: calc(1.5em + 1rem + 2px);
+  width: 100%;
+
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fieldset {
+  margin-bottom: 1rem;
+  margin: auto;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+.submit {
+  border-radius: 0.3rem;
+  color: #fff;
+  background-color: #5cb85c;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  border: 1px solid transparent;
+  margin-top: 10px;
+}
