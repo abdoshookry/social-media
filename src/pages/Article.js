@@ -129,8 +129,8 @@ export default function ArticlePage() {
   return (
     <div className="article">
       <Navbar />
-      <div className="bg-[#333]">
-        <div className="container py-12 text-white ">
+      <div className="bg-[#333] ">
+        <div className="container py-12 m-auto mx-10 w-auto text-white ">
           <div className="article-meta">
             <h1 className="pb-4 text-[2.5rem] font-medium leading-tight">
               {articleData.article.title}
@@ -178,8 +178,8 @@ export default function ArticlePage() {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="body pt-4">
+      <div className="container m-auto mx-10 w-auto">
+        <div className="body pt-4 ">
           <div className="text-xl  leading-7 mb-8">{articleBody}</div>
           <hr />
 
@@ -196,7 +196,7 @@ export default function ArticlePage() {
                     onChange={handleComment}
                   ></textarea>
                 </fieldset>
-                <button type="submit" className="submit float-right  py-1 px-3">
+                <button type="submit" className="button float-right  py-1 px-3">
                   Post Comment
                 </button>
               </form>

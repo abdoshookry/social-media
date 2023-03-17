@@ -81,7 +81,7 @@ export default function SignInPage() {
           </fieldset>
           <button
             type="submit"
-            className="submit float-right py-3 px-6 text-xl"
+            className="button float-right py-3 px-6 text-xl"
           >
             Sign In
           </button>

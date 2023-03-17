@@ -40,8 +40,11 @@ export default function Post({
   postLike,
   slug,
   favorited,
+  onShowPopup,
 }) {
   const [favorite, setFavourite] = useState(favorited);
+  const [hover, setHover] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
 
   const [likes, setLikes] = useState(postLike);
   const user = useContext(UserContext);
@@ -55,7 +58,14 @@ export default function Post({
         setLikes((n) => n - 1);
       }
       setFavourite(!favorite);
+      setHover(false);
+    } else {
+      handleShowPopup();
     }
+  }
+
+  function handleShowPopup() {
+    onShowPopup((showPopup) => !showPopup);
   }
   return (
     <div className="post pb-3">
@@ -63,7 +73,7 @@ export default function Post({
         <Link to={"/users/" + userName} className="img">
           <img src={userImage} alt="" className="rounded-full " />
         </Link>
-        <div className="info ">
+        <div className="info ml-2">
           <Link
             to={"/users/" + userName}
             className="text-[#5cb85c] hover:underline"
@@ -73,14 +83,19 @@ export default function Post({
 
           <p className="date font-light text-base text-[#999] ">{postDate}</p>
         </div>
-        <div className="button ml-auto ">
+        <div className="like ml-auto ">
           <button
             className={
-              "py-1 px-2 text-[#5cb85c] border border-solid rounded border-[#5cb85c]  hover:bg-[#398439] hover:text-white  hover:border-[#2d672d]  ease-in-out duration-150 " +
-              (favorite ? "bg-[#398439] text-white border-[#2d672d]" : "")
+              "py-1 px-2 text-[#5cb85c] border border-solid rounded border-[#5cb85c]    ease-in-out duration-150 " +
+              (favorite || hover
+                ? "bg-[#398439] text-white border-[#2d672d]"
+                : "")
             }
             onClick={handlePostLike}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
           >
+            {/* hover:bg-[#398439] hover:text-white  hover:border-[#2d672d] */}
             <FontAwesomeIcon icon={faHeart} className="mr-1" />
             {likes}
           </button>
