@@ -130,7 +130,7 @@ export default function Feed(props) {
         )}
       </div>
 
-      <div className="container float-left pt-4 mx-10 w-3/4 ">
+      <div className="container float-left pt-4 md:mx-10  md:w-3/4 ">
         <nav className="">
           <ul>
             <li>

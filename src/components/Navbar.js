@@ -28,14 +28,14 @@ export default function Navbar() {
         }
         onClick={handleBurgerMenu}
       ></div>
-      <div className="container m-auto ml-10   w-11/12">
+      <div className="container m-auto md:ml-10 md:float-none float-left    w-auto">
         <nav className=" flex flex-wrap justify-between items-center  mx-auto  py-3  pb-5 ">
           <div className="text-[#5cb85c] text-2xl font-bold ">
             <Link to={"/"}>conduit</Link>
           </div>
           <div className=" block  md:hidden">
             <div
-              className="burger-menu absolute p-1 cursor-pointer z-10 "
+              className="burger-menu absolute p-1 cursor-pointer z-10 top-4 right-8"
               onClick={handleBurgerMenu}
             >
               <div
@@ -63,7 +63,7 @@ export default function Navbar() {
             </div>
             <div
               className={
-                "menu absolute bg-white shadow-slate-800 drop-shadow-2xl h-full w-1/4 flex-wrap break-all right-0 top-0 " +
+                "menu absolute bg-white shadow-slate-800 drop-shadow-2xl h-full sm:w-1/4 w-2/4 flex-wrap break-all right-0 top-0 " +
                 (showLinks ? "block " : "hidden")
               }
             >

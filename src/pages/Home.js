@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className="home">
       <Navbar />
       {!user ? (
-        <div className="header container mx-auto max-w-full bg-[#5cb85c] text-white flex justify-center items-center py-4 px-4 mb-4">
+        <div className="header container mx-auto max-w-full bg-[#5cb85c] text-white text-center flex justify-center items-center py-4 px-4 mb-4">
           <header className=" ">
             <h1 className="text-[3.5rem] text-center pb-2 pt-4 mb-2">
               conduit
